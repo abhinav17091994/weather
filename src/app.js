@@ -4,7 +4,8 @@ const app = express();
 const hbs = require('hbs');
 const geocode =require('./utils/geocode');
 const forecast =require('./utils/forecast');
-console.log('HI');
+const port = process.env.PORT || 3000;
+
 // console.log(__dirname);
 // console.log(path.join(__dirname, '../public')); // modified path to get access of public dir
 // Define paths for Express config 
@@ -127,6 +128,6 @@ app.get('/weather', (req, res)=>{
     res.send({forecast: "It is snowing", loaction : "Philadelphia"});
 });
 
-app.listen(3000, ()=>{
-    console.log("Server is up on port 3000");
+app.listen(port, ()=>{
+    console.log("Server is up on port" + port);
 });
