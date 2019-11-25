@@ -4,7 +4,7 @@ const app = express();
 const hbs = require('hbs');
 const geocode =require('./utils/geocode');
 const forecast =require('./utils/forecast');
-
+console.log('HI');
 // console.log(__dirname);
 // console.log(path.join(__dirname, '../public')); // modified path to get access of public dir
 // Define paths for Express config 
